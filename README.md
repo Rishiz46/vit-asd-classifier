@@ -6,6 +6,7 @@ This repository provides a complete pipeline to fine-tune a Vision Transformer (
 
 vit-asd-classifier/
 │
+
 ├── vit_model/ # Fine-tuned model weights (.pth) and zipped model (.zip)
 
 ├── embeddings/ # Extracted embeddings (for CMCL)
