@@ -3,8 +3,22 @@
 This repository provides a complete pipeline to fine-tune a Vision Transformer (ViT) on functional MRI (fMRI) data to classify Autism Spectrum Disorder (ASD). It also includes code to extract embeddings for downstream multimodal fusion with TabTransformer and CMCL.
 
 ## 📁 Repository Structure
-
-<pre> ## 📁 Repository Structure ``` vit-asd-classifier/ │ ├── vit_model/ # Fine-tuned ViT model weights (.pth) and zipped model (.zip) │ ├── embeddings/ # Extracted fMRI embeddings for CMCL │ ├── vit_embeddings.npy │ └── vit_labels.npy │ ├── dataset/ # Input data and CSVs │ ├── raw/ # Original zipped NIfTI files (optional) │ ├── processed/ # Preprocessed .npy files │ └── Phenotypic_V1_0b.csv │ ├── scripts/ # Python scripts │ ├── dataset_download.py # Download and zip ABIDE dataset │ ├── unzip_preprocess.py # Unzip and preprocess fMRI data │ ├── train_vit.py # Train Vision Transformer (ViT) │ └── extract_embeddings.py # Extract ViT features for CMCL │ ├── requirements.txt # Python dependencies └── README.md # Project overview and instructions ``` </pre>
+vit-asd-classifier/
+├── vit_model/ # Fine-tuned ViT model weights (.pth) and zipped model (.zip)
+├── embeddings/ # Extracted embeddings (for CMCL)
+│ ├── vit_embeddings.npy
+│ └── vit_labels.npy
+├── dataset/ # Input data and CSVs
+│ ├── raw/ # Original zipped files (optional)
+│ ├── processed/ # Preprocessed .npy files
+│ └── Phenotypic_V1_0b.csv
+├── scripts/ # Python code files
+│ ├── dataset_download.py # Download and zip dataset
+│ ├── unzip_preprocess.py # Unzip and preprocess dataset
+│ ├── train_vit.py # Train ViT model
+│ └── extract_embeddings.py # Extract embeddings for CMCL
+├── requirements.txt # All Python package dependencies
+└── README.md # This file
 
 ## 🚀 Quick Start
 
