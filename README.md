@@ -9,11 +9,12 @@ vit-asd-classifier/
 │ ├── vit_embeddings.npy
 │ └── vit_labels.npy
 ├── dataset/ # Input data and CSVs
-│ ├── raw/ # Original zipped files (optional)
-│ ├── processed/ # Preprocessed .npy files
+│  # use the dataset_download.py & unzip_preprocess.py
+     to download the dataset & pre-processing
+     (I do dataset & pre-processing on my local, after I fine-tune the VIT model in Kaggle because it's faster)
 │ └── Phenotypic_V1_0b.csv
 ├── scripts/ # Python code files
-│ ├── dataset_download.py # Download and zip dataset
+│ ├── dataset_download.py # Download and zip the dataset
 │ ├── unzip_preprocess.py # Unzip and preprocess dataset
 │ ├── train_vit.py # Train ViT model
 │ └── extract_embeddings.py # Extract embeddings for CMCL
@@ -29,14 +30,14 @@ cd vit-asd-classifier
 
 ### 2. Create and activate a virtual environment (recommended)
 python -m venv venv
-source venv/bin/activate  ``` On Windows: venv\Scripts\activate
+source venv/bin/activate' '' On Windows: venv\Scripts\activate
 
 ### 3. Install dependencies
 pip install -r requirements.txt
 
 📦 How to Run
 
-✅ Step 1: Download and preprocess dataset
+✅ Step 1: Download and preprocess the dataset
 
 python scripts/dataset_download.py
 python scripts/unzip_preprocess.py
@@ -47,7 +48,7 @@ This will generate .npy files used for training.
 python scripts/train_vit.py
 Fine-tunes ViT (google/vit-base-patch16-224-in21k)
 Saves the best model to vit_model/best_model.pth
-Uses Focal Loss, augmentation, early stopping
+Uses Focal Loss, augmentation, and early stopping
 
 ✅ Step 3: Extract fMRI embeddings for fusion
 
