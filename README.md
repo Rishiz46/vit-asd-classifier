@@ -9,17 +9,19 @@ vit-asd-classifier/
 │ ├── vit_embeddings.npy
 │ └── vit_labels.npy
 ├── dataset/ # Input data and CSVs
-│ └── Phenotypic_V1_0b.csv
+│ └── Phenotypic_V1_0b_preprocessed1.csv
 
      # use the dataset_download.py & unzip_preprocess.py
      to download the dataset & pre-processing
      (I do dataset & pre-processing on my local, after I fine-tune the VIT model in Kaggle because it's faster)
 
 ├── scripts/ # Python code files
-│ ├── dataset_download.py # Download and zip the dataset
-│ ├── unzip_preprocess.py # Unzip and preprocess dataset
-│ ├── train_vit.py # Train ViT model
-│ └── extract_embeddings.py # Extract embeddings for CMCL
+│ ├── Dataset & CSV downloading script [Local Version].py # Download and zip the dataset
+│ ├── Unzip & Preprocessing Script [Local Version] .py # Unzip and preprocess dataset
+│ ├── ViT Fine-Tune [Kaggle Version] Script.py # Train ViT model
+│ ├── Plot_Metrics [Kaggle Version].py
+│ ├── Zip_Model [Kaggle Version].py
+│ └── Extract-Embedding For Fusion [Kaggle version].py # Extract embeddings for CMCL
 ├── requirements.txt # All Python package dependencies
 └── README.md # This file
 
@@ -41,20 +43,20 @@ pip install -r requirements.txt
 
 ✅ Step 1: Download and preprocess the dataset
 
-python scripts/dataset_download.py
-python scripts/unzip_preprocess.py
+python scripts/Dataset & CSV downloading script [Local Version].py
+python scripts/Unzip & Preprocessing Script [Local Version] .py
 This will generate .npy files used for training.
 
 ✅ Step 2: Train the Vision Transformer model
 
-python scripts/train_vit.py
+python scripts/ViT Fine-Tune [Kaggle Version] Script.py
 Fine-tunes ViT (google/vit-base-patch16-224-in21k)
 Saves the best model to vit_model/best_model.pth
 Uses Focal Loss, augmentation, and early stopping
 
 ✅ Step 3: Extract fMRI embeddings for fusion
 
-python scripts/extract_embeddings.py
+python scripts/Extract-Embedding For Fusion [Kaggle version].py
 Saves vit_embeddings.npy and vit_labels.npy to the embeddings/ directory
 These are used later in CMCL for multimodal fusion
 
