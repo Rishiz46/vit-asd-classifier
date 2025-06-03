@@ -9,10 +9,12 @@ vit-asd-classifier/
 │ ├── vit_embeddings.npy
 │ └── vit_labels.npy
 ├── dataset/ # Input data and CSVs
-│  # use the dataset_download.py & unzip_preprocess.py
+│ └── Phenotypic_V1_0b.csv
+
+     # use the dataset_download.py & unzip_preprocess.py
      to download the dataset & pre-processing
      (I do dataset & pre-processing on my local, after I fine-tune the VIT model in Kaggle because it's faster)
-│ └── Phenotypic_V1_0b.csv
+
 ├── scripts/ # Python code files
 │ ├── dataset_download.py # Download and zip the dataset
 │ ├── unzip_preprocess.py # Unzip and preprocess dataset
