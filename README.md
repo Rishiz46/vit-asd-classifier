@@ -2,7 +2,7 @@
 
 This repository provides a complete pipeline to fine-tune a Vision Transformer (ViT) on functional MRI (fMRI) data to classify Autism Spectrum Disorder (ASD). It also includes code to extract embeddings for downstream multimodal fusion with TabTransformer and CMCL.
 
-## 📁 Repository Structure
+# 📁 Repository Structure
 vit-asd-classifier/
 ├── vit_model/ # Fine-tuned ViT model weights (.pth) and zipped model (.zip)
 ├── embeddings/ # Extracted embeddings (for CMCL)
