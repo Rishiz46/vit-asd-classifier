@@ -2,7 +2,7 @@
 
 This repository provides a complete pipeline to fine-tune a Vision Transformer (ViT) on functional MRI (fMRI) data to classify Autism Spectrum Disorder (ASD). It also includes code to extract embeddings for downstream multimodal fusion with TabTransformer and CMCL.
 
-### 📁 Repository Structure
+```### 📁 Repository Structure
 vit-asd-classifier/
 ├── vit_model/ # Fine-tuned ViT model weights (.pth) and zipped model (.zip)
 ├── embeddings/ # Extracted embeddings (for CMCL)
@@ -23,13 +23,13 @@ vit-asd-classifier/
 ## 🚀 Quick Start
 
 ### 1. Clone the repository
-`bash
+```bash
 git clone https://github.com/Rishiz46/vit-asd-classifier.git
 cd vit-asd-classifier
 
 ### 2. Create and activate a virtual environment (recommended)
 python -m venv venv
-source venv/bin/activate  `` On Windows: venv\Scripts\activate
+source venv/bin/activate  ``` On Windows: venv\Scripts\activate
 
 ### 3. Install dependencies
 pip install -r requirements.txt
