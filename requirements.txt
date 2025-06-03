@@ -1,0 +1,27 @@
+# Core Libraries
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+# Deep Learning
+torch>=2.0.0
+torchvision
+torchaudio
+
+# Transformers & Tokenizers
+transformers>=4.30.0
+datasets
+
+# Image Processing
+Pillow
+
+# Progress Bars
+tqdm
+
+# Environment handling
+python-dotenv
+
+# Optional but helpful
+jupyter
